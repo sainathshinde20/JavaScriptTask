@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div>Find max-consecutive-count</div>
+    </body>
+    <script>
+        
+        var findMaxConsecutiveOnes = function(nums){
+            let maxCount = 0;
+            let count = 0;
+            for(var i in nums){
+                count = nums[i] ===1 ? count + 1 :0;
+            
+                if(count > maxCount){
+                     maxCount = count;
+                }
+            }
+            return maxCount;
+        };
+    </script>
+</html>

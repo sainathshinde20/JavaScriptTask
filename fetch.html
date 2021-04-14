@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Fetch Document</title>
+</head>
+<body>
+    <button onclick="fetch();"  >Click here to Fetch Document</button>
+    <br>
+    <ul class="messages">
+    </ul>
+</body>
+<script>
+    function fetch(){
+        $.ajax({
+            url: "https://www.example.com/api/get/1",
+            type:"GET",
+            dataType:"JSON",
+            data:JSON.stringify({ }),
+            success:function(data){
+                $('.messages').append("<li>"+JSON.stringify(data)+"</li>")
+            }
+
+        });
+    }
+</script>
+</html>

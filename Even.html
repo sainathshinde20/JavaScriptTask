@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: '';
+}
+body{
+    background-color:cyan;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+        </style>
+    </head>
+<body>
+    <h1> Even Number Are As Follows </h1>
+    <br><br>
+</body>
+<script>
+    let getEvenNumber = () => {
+        const arr=[1,2,3,4,5,6,7,8,9,10,12,23,22,44,5,66,78,79,56,57,47];
+
+        let evenNumber=arr.filter(number => number % 2 == 0);
+        document.write('Even Numbers: ' + evenNumber);
+    }
+    getEvenNumber();
+</script>
+</html>
